@@ -1,0 +1,15 @@
+D:\ASP.NET CORE MVC\Store\Repositories\obj\Debug\net6.0\Repositories.csproj.AssemblyReference.cache
+D:\ASP.NET CORE MVC\Store\Repositories\obj\Debug\net6.0\Repositories.GeneratedMSBuildEditorConfig.editorconfig
+D:\ASP.NET CORE MVC\Store\Repositories\obj\Debug\net6.0\Repositories.AssemblyInfoInputs.cache
+D:\ASP.NET CORE MVC\Store\Repositories\obj\Debug\net6.0\Repositories.AssemblyInfo.cs
+D:\ASP.NET CORE MVC\Store\Repositories\obj\Debug\net6.0\Repositories.csproj.CoreCompileInputs.cache
+D:\ASP.NET CORE MVC\Store\Repositories\bin\Debug\net6.0\Repositories.deps.json
+D:\ASP.NET CORE MVC\Store\Repositories\bin\Debug\net6.0\Repositories.dll
+D:\ASP.NET CORE MVC\Store\Repositories\bin\Debug\net6.0\Repositories.pdb
+D:\ASP.NET CORE MVC\Store\Repositories\bin\Debug\net6.0\Entities.dll
+D:\ASP.NET CORE MVC\Store\Repositories\bin\Debug\net6.0\Entities.pdb
+D:\ASP.NET CORE MVC\Store\Repositories\obj\Debug\net6.0\Repositories.csproj.CopyComplete
+D:\ASP.NET CORE MVC\Store\Repositories\obj\Debug\net6.0\Repositories.dll
+D:\ASP.NET CORE MVC\Store\Repositories\obj\Debug\net6.0\refint\Repositories.dll
+D:\ASP.NET CORE MVC\Store\Repositories\obj\Debug\net6.0\Repositories.pdb
+D:\ASP.NET CORE MVC\Store\Repositories\obj\Debug\net6.0\ref\Repositories.dll

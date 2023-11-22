@@ -1,0 +1,50 @@
+@* Ortak sayfa tanımı yaparak her sayfada bulunması gereken yapı tek dosyadan yönetilir *@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    @* Bootstrap'i libman ile yükledikten sonra projeye dahil ettik *@
+    <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.min.css" />
+    @* Kendi css dosyamızı dahil ettik *@
+    <link rel="stylesheet" href="~/lib/css/site.css" />
+    @* Fontawesome'u libman ile yükledikten sonra projeye dahil ettik *@
+    <link rel="stylesheet" href="~/lib/font-awesome/css/all.css" />
+</head>
+<body>
+
+    <header>
+        @* _Navbar.cshtml'i çağırdık *@
+        <partial name="_Navbar"/>
+        @RenderSection("Header", required: false)
+    </header>
+
+    @* Container görüntüyü ortaladı *@
+    <div class="container">
+        @* p-3 tüm eksenlerden padding verdi *@
+        <main role="main" class="p-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer>
+        Footer
+        @RenderSection("Footer", required: false)
+    </footer>
+
+    @* JQuery'i libman ile yükledikten sonra projeye dahil ettik *@
+    <script src="~/lib/jquery/jquery.min.js"></script>
+    @* Bootstrap dahil edildi *@
+    <script src="~/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    @* Kendi js dosyamızı dahil ettik *@
+    <script src="~/js/site.js"></script>
+    @* Fontawesome dahil edildi *@
+    <script src="~/lib/font-awesome/js/all.min.js"></script>
+
+
+    @* Tüm scriptler yüklendikten sonra çalıştırır *@
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>

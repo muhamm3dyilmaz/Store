@@ -1,0 +1,20 @@
+@model Product
+
+@* Ekranı(12 sütun) 4 sütuna denk gelecek orta boyutta böler. Yan yana 3 iteme izin verir *@
+<div class="col-sm-12 col-md-4 col-xxl-3 my-3">
+    <div class="card" style="width: 18rem;">
+        <img src="~/images/default.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">@Model.ProductName</h5>
+            <p class="card-text">
+                <i class="fa-solid fa-money-bills"></i>
+                @Model.Price
+            </p>
+            <p class="card-text">Product Description...</p>
+            <a class="btn btn-dark" asp-controller="Product" asp-action="Get" asp-route-id="@Model.ProductId">
+                <i class="fa-solid fa-circle-info"></i>
+                Details
+            </a>
+        </div>
+    </div>
+</div>

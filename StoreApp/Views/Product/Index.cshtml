@@ -1,0 +1,22 @@
+@{
+    Layout = "_Layout";
+}
+@model List<Product>
+
+@section Footer{
+    <div>
+        Only for index footer
+    </div>
+}
+
+@* Ekranda satır flowu oluşturur *@
+<div class="row my-3">
+    @foreach(Product product in Model)
+    {
+
+            @* _ProductCard.cshtml çağırdık *@
+            <partial name="_ProductCard" model="@product" />
+
+
+    }
+</div>

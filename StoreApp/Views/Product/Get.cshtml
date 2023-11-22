@@ -1,0 +1,17 @@
+@{
+    Layout = "_Layout";
+}
+@model Product
+
+<h3>@Model.ProductName</h3>
+<p>@Model.Price</p>
+<div class="btn-group">
+    <a class="btn btn-dark" asp-controller="Product" asp-action="Index">
+        <i class="fa-solid fa-bars-staggered"></i>
+        Products
+    </a>
+    <a class="btn btn-outline-dark" asp-controller="Home" asp-action="Index">
+        <i class="fa-solid fa-house"></i>
+        Home
+    </a>
+</div>
