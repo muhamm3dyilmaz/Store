@@ -13,9 +13,14 @@ namespace Repositories.EFCore
         {
         }
 
-        public IQueryable<Product> GetAllProduct(bool trackChanges)
+        public IQueryable<Product> GetAllProducts(bool trackChanges)
         {
             return FindAll(trackChanges);
+        }
+
+        public Product? GetProductById(int productId, bool trackChanges)
+        {
+            return FindByCondition(p => p.ProductId.Equals(productId), trackChanges);
         }
     }
 }

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Repositories.Contracts;
@@ -19,6 +20,13 @@ namespace Repositories.EFCore
         public IQueryable<T> FindAll(bool trackChanges)
         {
             return trackChanges ? _context.Set<T>() : _context.Set<T>().AsNoTracking();
+        }
+
+        public T? FindByCondition(Expression<Func<T, bool>> expression, bool trackChanges)
+        {
+            return trackChanges 
+            ? _context.Set<T>().Where(expression).SingleOrDefault() 
+            : _context.Set<T>().Where(expression).AsNoTracking().SingleOrDefault();
         }
     }
 }

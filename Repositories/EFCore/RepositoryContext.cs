@@ -10,6 +10,7 @@ namespace Repositories.EFCore
 public class RepositoryContext : DbContext
     {
         public DbSet<Product> Products { get; set; }
+        public DbSet<Category> Categories { get; set; }
 
         public RepositoryContext(DbContextOptions<RepositoryContext> options) : base(options)
         {
@@ -27,6 +28,12 @@ public class RepositoryContext : DbContext
                new Product() {ProductId = 3, ProductName = "Keyboard", Price = 760},
                new Product() {ProductId = 4, ProductName = "Earpods", Price = 3_799},
                new Product() {ProductId = 5, ProductName = "Phone", Price = 32_500}
+            );
+
+            modelBuilder.Entity<Category>()
+            .HasData(
+                new Category() {CategoryId = 1, CategoryName = "Electronic"},
+                new Category() {CategoryId = 2, CategoryName = "Home"}
             );
         }
     }

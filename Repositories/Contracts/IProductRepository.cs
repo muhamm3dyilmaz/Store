@@ -8,6 +8,7 @@ namespace Repositories.Contracts
 {
     public interface IProductRepository : IRepositoryBase<Product>
     {
-        IQueryable<Product> GetAllProduct(bool trackChanges);
+        IQueryable<Product> GetAllProducts(bool trackChanges);
+        Product? GetProductById(int productId, bool trackChanges);
     }
 }

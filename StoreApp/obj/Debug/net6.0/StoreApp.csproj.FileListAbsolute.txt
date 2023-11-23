@@ -69,3 +69,4 @@ D:\ASP.NET CORE MVC\Store\StoreApp\bin\Debug\net6.0\Entities.dll
 D:\ASP.NET CORE MVC\Store\StoreApp\bin\Debug\net6.0\Entities.pdb
 D:\ASP.NET CORE MVC\Store\StoreApp\bin\Debug\net6.0\Repositories.dll
 D:\ASP.NET CORE MVC\Store\StoreApp\bin\Debug\net6.0\Repositories.pdb
+D:\ASP.NET CORE MVC\Store\StoreApp\obj\Debug\net6.0\StoreApp.sourcelink.json

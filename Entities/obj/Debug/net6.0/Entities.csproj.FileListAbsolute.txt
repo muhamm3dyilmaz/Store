@@ -9,3 +9,4 @@ D:\ASP.NET CORE MVC\Store\Entities\obj\Debug\net6.0\Entities.dll
 D:\ASP.NET CORE MVC\Store\Entities\obj\Debug\net6.0\refint\Entities.dll
 D:\ASP.NET CORE MVC\Store\Entities\obj\Debug\net6.0\Entities.pdb
 D:\ASP.NET CORE MVC\Store\Entities\obj\Debug\net6.0\ref\Entities.dll
+D:\ASP.NET CORE MVC\Store\Entities\obj\Debug\net6.0\Entities.sourcelink.json
