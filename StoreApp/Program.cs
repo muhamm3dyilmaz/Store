@@ -1,6 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using Repositories.Contracts;
 using Repositories.EFCore;
+using Services.Contracts;
+using Services.Managers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,14 +13,16 @@ builder.Services.AddDbContext<RepositoryContext>(options => {
     options.UseSqlite(builder.Configuration.GetConnectionString("sqlConnection"),
     b => b.MigrationsAssembly("StoreApp"));
 });
-//IRepositoryManager implemente edildi
+
+//REPOSITORIES LAYER IoC
 builder.Services.AddScoped<IRepositoryManager, RepositoryManager>();
-//IProductRepository implemente edildi
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
-//ICategoryRepository implemente edildi
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 
-
+//SERVICES LAYER IoC
+builder.Services.AddScoped<IServiceManager, ServiceManager>();
+builder.Services.AddScoped<IProductService, ProductManager>();
+builder.Services.AddScoped<ICategoryService, CategoryManager>();
 
 var app = builder.Build();
 

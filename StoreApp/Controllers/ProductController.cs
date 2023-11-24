@@ -7,14 +7,15 @@ using Microsoft.EntityFrameworkCore;
 using Entities.Models;
 using Repositories.EFCore;
 using Repositories.Contracts;
+using Services.Contracts;
 
 namespace StoreApp.Controllers
 {
     public class ProductController : Controller
     {
-        private readonly IRepositoryManager _manager;
+        private readonly IServiceManager _manager;
 
-        public ProductController(IRepositoryManager manager)
+        public ProductController(IServiceManager manager)
         {
             _manager = manager;
         }
@@ -22,14 +23,14 @@ namespace StoreApp.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            var model = _manager.ProductRepo.GetAllProducts(false);
+            var model = _manager.ProductService.GetAllProducts(false);
             return View(model);
         }
 
-
-        public IActionResult Get(int productId)
+        [HttpGet]
+        public IActionResult Get([FromRoute(Name = "productId")] int productId)
         {
-            var product = _manager.ProductRepo.GetProductById(productId, false);
+            var product = _manager.ProductService.GetProductById(productId, false);
             return View(product);
         }
     }
